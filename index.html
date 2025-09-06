@@ -2,109 +2,256 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Green Earth</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Green Earth</title>
 
-    <!-- Daiy UI -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <!-- Daiy UI -->
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5/themes.css" rel="stylesheet" type="text/css" />
 
-    <!-- font -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
-        rel="stylesheet">
+  <!-- font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+    rel="stylesheet">
 
-    <style>
-        * {
-            font-family: "Inter", sans-serif;
-        }
-    </style>
+  <style>
+    * {
+      font-family: "Inter", sans-serif;
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-[#f0fdf4]">
 
-    <header>
+  <header>
 
-      <!-- Navbar -->
-        <nav class="w-full h-full bg-[#15803d] flex flex-col items-center justify-center gap-3 py-3
+    <!-- Navbar -->
+    <nav class="w-full h-full bg-[#15803d] flex flex-col items-center justify-center gap-3 py-3
         lg:h-20 lg:flex-row lg:justify-between lg:items-center px-10">
 
-          <div class="nav-1">
-            <h2 class="text-white text-xl font-bold">Green Earth</h2>
-          </div>
+      <div class="nav-1">
+        <h2 class="text-white text-xl font-bold">Green Earth</h2>
+      </div>
 
-          <div class="nav-2">
+      <div class="nav-2">
 
-            <div class="lg:flex">
-              <ul class="text-white flex flex-row gap-10 justify-between items-center text-xs">
-                <a href=""><li>About</li></a>
-                <a href=""><li>Gallery</li></a>
-                <a href=""><li>Plant A Tree</li></a>
-              </ul>
-            </div>
+        <div class="lg:flex">
+          <ul class="text-white flex flex-row gap-10 justify-between items-center text-xs">
+            <a href="">
+              <li>About</li>
+            </a>
+            <a href="">
+              <li>Gallery</li>
+            </a>
+            <a href="">
+              <li>Plant A Tree</li>
+            </a>
+          </ul>
+        </div>
 
-          </div>
+      </div>
 
-          <div class="nav-3">
-            <button class="bg-[#facc15] rounded-full px-5 py-3 text-[#15803d] text-xs hover:bg-[#d9b111]">Plan A Tree</button>
+      <div class="nav-3">
+        <button class="bg-[#facc15] rounded-full px-5 py-3 text-[#15803d] text-xs hover:bg-[#d9b111]">Plan A
+          Tree</button>
 
-          </div>
-        </nav>
-        <!-- End Navbar -->
+      </div>
+    </nav>
+    <!-- End Navbar -->
 
-        <!-- Banner -->
-         <div class="banner bg-[#cff0dc] flex flex-col justify-between items-center gap-6 py-6 px-4
+    <!-- Banner -->
+    <div class="banner bg-[#cff0dc] flex flex-col justify-between items-center gap-6 py-6 px-4
             text-center 
             lg:flex-row lg:justify-between lg:items-center lg:py-0 lg:px-10 lg:text-left">
 
-          <div class="banner-1">
-            <img class="w-full max-w-[300px] lg:w-[546px] lg:h-[383px]" src="assets/hero-leaf1.png" alt="">
+      <div class="banner-1">
+        <img class="w-full max-w-[300px] lg:w-[546px] lg:h-[383px]" src="assets/hero-leaf1.png" alt="">
+      </div>
+
+      <div class="banner-2 flex flex-col justify-center items-center mx-auto my-auto text-center gap-4">
+        <div>
+          <h1 class="text-xl lg:text-3xl font-bold text-center pb-2">Plant a Tree, Grow a Future</h1>
+          <p class="text-[#1f2937] text-center pb-2 text-sm lg:text-base">Join our mission to plant 1 million trees and
+            make the Earth greener for future <br>generations.</p>
+        </div>
+
+        <div>
+          <button
+            class="bg-[#facc15] rounded-full px-5 py-3 text-[#15803d] text-sm lg:px-5 lg:py-3 lg:text-xs hover:bg-[#d9b111]">Get
+            Involved</button>
+        </div>
+
+      </div>
+
+      <div class="banner-3">
+        <img class="w-full max-w-[300px] lg:w-[546px] lg:h-[383px]" src="assets/hero-leaf2.png" alt="">
+      </div>
+
+    </div>
+    <!-- End Banner -->
+
+  </header>
+
+
+  <main>
+
+    <!-- Our Impact  -->
+    <div class="w-10/12 mx-auto my-20 text-center">
+      <div>
+        <h2 class="text-2xl font-bold pb-4">Choose Your Trees</h2>
+      </div>
+
+      <div class="impact-body lg:grid lg:grid-cols-8 gap-5">
+
+        <div class="category-column lg:col-span-1">
+          <!-- js er kaj -->
+          <div class="bg-[#15803d]">
+            <h2 class="text-xl font-bold pb-4">Categories</h2>
+            <ul id="categoryContainer" class="flex-col gap-5 text-lg">
+              <li>mango</li>
+              <li>mango</li>
+
+            </ul>
           </div>
 
-          <div class="banner-2 flex flex-col justify-center items-center mx-auto my-auto text-center gap-4">
-            <div>
-              <h1 class="text-xl lg:text-3xl font-bold text-center pb-2">Plant a Tree, Grow a Future</h1>
-              <p class="text-[#1f2937] text-center pb-2 text-sm lg:text-base">Join our mission to plant 1 million trees and make the Earth greener for future <br>generations.</p>
+
+        </div>
+
+        <div class="card-column col-span-6 gap-3 lg:flex-row lg:flex lg:justify-center lg:items-center lg:gap-5">
+
+          <!-- card no 1 -->
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body ">
+              <h2 class="card-title">Mango Tree</h2>
+              <p class="text-left text-xs w-full text-[#1F2937]">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
+          
+              <div class="card-actions justify-between items-center">
+                <div class="badge badge-outline bg-[#dcfce7] border-none rounded-full text-sm p-4 text-[#15803d]">Fruit Tree</div>
+                <div><p class="text-sm font-bold">৳ 500</p></div>
+              </div>
+
+              <div class="card-actions-2">
+      <button class="btn btn-primary btn-block bg-[#15803d] rounded-full mt-2">Add to Cart</button>
+    </div>
             </div>
-            
-            <div>
-              <button class="bg-[#facc15] rounded-full px-5 py-3 text-[#15803d] text-sm lg:px-5 lg:py-3 lg:text-xs hover:bg-[#d9b111]">Get Involved</button>
+          </div>
+
+          <!-- card no 2 -->
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body ">
+              <h2 class="card-title">Mango Tree</h2>
+              <p class="text-left text-xs w-full text-[#1F2937]">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
+          
+              <div class="card-actions justify-between items-center">
+                <div class="badge badge-outline bg-[#dcfce7] border-none rounded-full text-sm p-4 text-[#15803d]">Fruit Tree</div>
+                <div><p class="text-sm font-bold">৳ 500</p></div>
+              </div>
+
+              <div class="card-actions-2">
+      <button class="btn btn-primary btn-block bg-[#15803d] rounded-full mt-2">Add to Cart</button>
+    </div>
             </div>
-            
+          </div>
+
+          <!-- card no 3 -->
+          <div class="card bg-base-100 w-96 shadow-sm">
+            <figure>
+              <img src="https://img.daisyui.com/images/stock/photo-1606107557195-0e29a4b5b4aa.webp" alt="Shoes" />
+            </figure>
+            <div class="card-body ">
+              <h2 class="card-title">Mango Tree</h2>
+              <p class="text-left text-xs w-full text-[#1F2937]">A fast-growing tropical tree that produces delicious, juicy mangoes during summer. Its dense green</p>
+          
+              <div class="card-actions justify-between items-center">
+                <div class="badge badge-outline bg-[#dcfce7] border-none rounded-full text-sm p-4 text-[#15803d]">Fruit Tree</div>
+                <div><p class="text-sm font-bold">৳ 500</p></div>
+              </div>
+
+              <div class="card-actions-2">
+      <button class="btn btn-primary btn-block bg-[#15803d] rounded-full mt-2">Add to Cart</button>
+    </div>
+            </div>
           </div>
           
-          <div class="banner-3">
-            <img class="w-full max-w-[300px] lg:w-[546px] lg:h-[383px]" src="assets/hero-leaf2.png" alt="">
-          </div>
+          
 
-         </div>
+        </div>
 
+        <div class="cart-column lg:col-span-1 bg-white rounded-lg">
 
+          <h6 class="font-bold text-lg mt-3 text-left">Your Cart</h6>
 
+        </div>
 
+        <div>
 
-    </header>
+        </div>
+      </div>
 
+    </div>
 
-    <main>
+    </div>
 
-
-    </main>
-
-
-
-    <footer>
-
-
-    </footer>
+    </div>
 
 
-    <script src="script.js"></script>
+
+
+
+
+
+    <!-- About Campaign -->
+    <div class="w-2/4 mx-auto my-20 text-center">
+      <div>
+        <h2 class="text-2xl font-bold pb-4">About The Campaign</h2>
+      </div>
+
+      <div class="flex flex-col lg:flex-row gap-10 lg:gap-20 lg:items-center lg:justify-center">
+
+        <div class="h-full w-full ">
+          <img src="assets/about.png" alt="">
+        </div>
+
+        <div class="">
+          <p class="text-[#1F2937] text-xs lg:ml-10 text-center lg:text-left">Green Earth is a global tree plantation
+            initiative dedicated to fighting climate change. Since our start, we’ve planted over 500,000 trees
+            worldwide. By joining our campaign, you help restore forests, create habitats for wildlife, and combat
+            global warming.</p>
+          <ul type="disc" class="list-disc text-left ml-13 mt-4 text-[#1F2937] text-xs">
+            <li>Restoration of natural habitats</li>
+            <li>Improvement of air quality</li>
+            <li>Support for local communities</li>
+          </ul>
+        </div>
+
+      </div>
+
+    </div>
+    <!-- End About Campaign -->
+
+
+  </main>
+
+
+
+  <footer>
+
+
+  </footer>
+
+
+  <script src="script.js"></script>
 </body>
 
 </html>
