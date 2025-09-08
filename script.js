@@ -32,7 +32,7 @@ const showCategory = (categories) => {
     });
 
     if (e.target.localName === "li") {
-        console.log(e.target.id);
+        showLoading();
     //   showLoading()
       e.target.classList.add("bg-[#15803d]");
       loadCardByCategory(e.target.id);
@@ -62,7 +62,7 @@ const showCardByCategory = (plants) => {
     cardContainer.innerHTML += `
     <div class="card bg-base-100 w-full lg:w-80 shadow-sm">
             <figure>
-              <img src="${p.image}" alt="Shoes" />
+              <img class="w-[311px] h-[186px] p-4 rounded-5xl" src="${p.image}" alt="Shoes" />
             </figure>
             <div id="${p.id}" class="card-body">
               <h2 class="card-title">${p.name}</h2>
@@ -111,9 +111,9 @@ const showCart = (cart) => {
   cartContainer.innerHTML = '';
   cart.forEach((c) => {
     cartContainer.innerHTML += `<div class="eachCart bg-[#F0FDF4] flex justify-between items-center p-3 rounded-lg my-2">
-              <div>
-                <h6>${c.title}</h6>
-                <p class="text-left">${c.price} x </p>
+              <div class="text-left pl-2">
+                <h6 class="pb-2 font-bold">${c.title}</h6>
+                <p class="  text-[#1F2937]">${c.price} x 1 </p>
               </div>
 
               <div>
@@ -130,3 +130,9 @@ const deleteCartItem = (id) => {
 }
 
 loadCardByCategory("1");
+
+const showLoading = () => {
+    cardContainer.innerHTML = `
+     <div class="bg-green-500 p-3 ">Loading...</div>
+    `
+}
