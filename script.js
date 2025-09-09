@@ -146,7 +146,5 @@ const deleteCartItem = (id) => {
 loadCardByCategory("1");
 
 const showLoading = () => {
-    cardContainer.innerHTML = `
-     <div class="bg-green-500 p-3 ">Loading...</div>
-    `
+    cardContainer.innerHTML = `<span class="loading loading-dots loading-xl"></span>`;
 }
