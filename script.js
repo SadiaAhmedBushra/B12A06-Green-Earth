@@ -5,6 +5,13 @@ const cartContainer = document.getElementById('cartContainer');
 let cart = []
 
 const totalPrice = document.getElementById('totalPrice');
+const cartItems = document.getElementById('cartItems');
+const cartTotalPrice = document.getElementById('cartTotalPrice');
+
+const separateTaka = document.getElementById("cartTotalPrice");
+separateTaka.textContent = totalPrice;
+
+
 
 const loadCategory = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
@@ -43,7 +50,6 @@ const showCategory = (categories) => {
 loadCategory();
 
 const loadCardByCategory = (categoryID) => {
-  // console.log(categoryID);
   fetch(`https://openapi.programming-hero.com/api/category/${categoryID}`)
   .then((res) => res.json())
   .then (data => {
@@ -60,9 +66,9 @@ const showCardByCategory = (plants) => {
   cardContainer.innerHTML = '';
   plants.forEach(p => {
     cardContainer.innerHTML += `
-    <div class="card bg-base-100 w-full lg:w-80 shadow-sm">
-            <figure>
-              <img class="w-[311px] h-[186px] p-4 rounded-5xl" src="${p.image}" alt="Shoes" />
+    <div class="card bg-base-100 w-[350px] lg:w-80 h-[450px] shadow-sm">
+            <figure class="h-[186px] flex justify-center items-center">
+              <img class="rounded-xl w-[311px] h-[186px] p-4 object-cover" src="${p.image}" alt="Shoes" />
             </figure>
             <div id="${p.id}" class="card-body">
               <h2 class="card-title">${p.name}</h2>
@@ -103,14 +109,20 @@ const handleCart = (e) => {
     });
 
     showCart(cart);
-}
+};
 
-
+  
 
 const showCart = (cart) => {
   cartContainer.innerHTML = '';
+  let sumOfCart = 0;
+
   cart.forEach((c) => {
-    cartContainer.innerHTML += `<div class="eachCart bg-[#F0FDF4] flex justify-between items-center p-3 rounded-lg my-2">
+
+    const numericPrice = parseFloat(c.price.substring(1).trim());
+    sumOfCart += numericPrice;
+
+    cartContainer.innerHTML += `<div class="eachCart bg-[#F0FDF4] m-2 flex justify-between items-center p-3 rounded-lg my-2">
               <div class="text-left pl-2">
                 <h6 class="pb-2 font-bold">${c.title}</h6>
                 <p class="  text-[#1F2937]">${c.price} x 1 </p>
@@ -121,6 +133,8 @@ const showCart = (cart) => {
               </div>
             </div>`
   });
+
+cartTotalPrice.innerText = sumOfCart;
 };
 
 const deleteCartItem = (id) => {
