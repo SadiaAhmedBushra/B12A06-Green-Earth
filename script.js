@@ -12,6 +12,8 @@ const separateTaka = document.getElementById("cartTotalPrice");
 separateTaka.textContent = totalPrice;
 
 
+const modalContainer = document.getElementById('modalContainer');
+const treeDetailModal = document.getElementById('treeDetailModal');
 
 const loadCategory = () => {
   fetch("https://openapi.programming-hero.com/api/categories")
@@ -71,7 +73,7 @@ const showCardByCategory = (plants) => {
               <img class="rounded-xl w-[311px] h-[186px] p-4 object-cover" src="${p.image}" alt="Shoes" />
             </figure>
             <div id="${p.id}" class="card-body">
-              <h2 class="card-title">${p.name}</h2>
+              <h2 class="card-title treeName cursor-pointer" data-id="${p.id}">${p.name}</h2>
               <p class="text-left text-xs w-full text-[#1F2937]">${p.description}</p>
               
           
@@ -89,12 +91,49 @@ const showCardByCategory = (plants) => {
   });
 };
 
+
+const showDetailsModal = (plant) => {
+
+  treeDetailModal.showModal();
+
+  modalContainer.innerHTML = `
+    <h1 class="font-bold text-lg">${plant.name}</h1>
+    <img src="${plant.image}" alt="It's a plant image" class="w-full rounded-lg my-3"/>
+    <p class="py-2 text-sm">${plant.description}</p>
+    <p class="font-semibold">Category: ${plant.category}</p>
+    <p class="font-semibold">Price: ৳${plant.price}</p>
+  `;
+   
+};
+
+
 cardContainer.addEventListener('click', (e) => {
   
   if(e.target.innerText === 'Add to Cart') {
     handleCart(e);
   }
+
+  if (e.target.classList.contains('treeName')) {
+    const plantId = e.target.getAttribute('data-id');
+    handleModal(plantId);
+  }
+
 })
+
+const handleModal = (plantId) => {
+
+  
+  fetch(`https://openapi.programming-hero.com/api/plant/${plantId}`)
+  .then(res=> res.json())
+  .then(data => {
+      const plant = data.data;
+      console.log(plant);
+      showDetailsModal(plant);
+    })
+  .catch(err => {
+    console.log(err)
+  })
+};
 
 const handleCart = (e) => {
   const title = e.target.parentNode.parentNode.children[0].innerText;
