@@ -26,7 +26,7 @@
   </style>
 </head>
 
-<body class="bg-[#f0fdf4]">
+<body class="bg-[#f0fdf4] overflow-x-hidden">
 
   <header>
 
@@ -65,12 +65,11 @@
     <!-- End Navbar -->
 
     <!-- Banner -->
-    <div class="banner bg-[#cff0dc] flex flex-col justify-between items-center gap-6 py-6 px-4
-            text-center 
+    <div class="banner bg-[#cff0dc] flex flex-col justify-between items-center gap-6 py-6 px-4 text-center w-full
             lg:flex-row lg:justify-between lg:items-center lg:py-0 lg:px-10 lg:text-left">
 
       <div class="banner-1">
-        <img class="w-full max-w-[300px] lg:w-[546px] lg:h-[383px]" src="assets/hero-leaf1.png" alt="">
+        <img class="w-full max-w-sm lg:max-w-[546px] lg:h-[383px]" src="assets/hero-leaf1.png" alt="">
       </div>
 
       <div class="banner-2 flex flex-col justify-center items-center mx-auto my-auto text-center gap-4">
@@ -89,7 +88,7 @@
       </div>
 
       <div class="banner-3">
-        <img class="w-full max-w-[300px] lg:w-[546px] lg:h-[383px]" src="assets/hero-leaf2.png" alt="">
+        <img class="w-full max-w-sm lg:max-w-[546px] lg:h-[383px]" src="assets/hero-leaf2.png" alt="">
       </div>
 
     </div>
@@ -101,14 +100,14 @@
   <main>
 
     <!-- Choose Your Trees  -->
-    <div class="w-10/12 mx-auto my-20 text-center">
+    <div class="w-11/12 mx-auto my-20 text-center">
       <div>
         <h2 class="text-2xl font-bold pb-4">Choose Your Trees</h2>
       </div>
 
       <!-- <h2 class="text-2xl font-bold pb-4 ">Choose Your Trees</h2> -->
 
-      <div class="impact-body lg:grid lg:grid-cols-12 gap-5">
+      <div class="impact-body flex flex-col lg:grid lg:grid-cols-12 gap-5">
 
         <div class="category-column flex flex-col gap-5 lg:col-span-2 lg:text-left">
           <div class=" mb-10">
@@ -204,9 +203,9 @@
       <!-- Modal -->
 
 <dialog id="treeDetailModal" class="modal">
-  <div class="modal-box">
+   <div class="modal-box max-w-full sm:max-w-lg">
     <div id="modalContainer">
-      <div  class="w-[5%]"></div>
+       <div class="w-full"></div> 
     </div>
     <div class="modal-action">
       <form method="dialog">
