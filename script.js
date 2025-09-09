@@ -98,7 +98,7 @@ const showDetailsModal = (plant) => {
   treeDetailModal.showModal();
 
   modalContainer.innerHTML = `
-  <div >
+  <div>
     <h1 class="text-center font-bold text-lg">${plant.name}</h1>
     <img src="${plant.image}" alt="It's a plant image" class="rounded-xl w-[100px] h-[300px] lg:w-[100px] lg:h-[300px]  mx-auto my-2"/>
     <p class=" text-sm text-center py-5">${plant.description}</p>
@@ -184,6 +184,9 @@ const deleteCartItem = (id) => {
 }
 
 loadCardByCategory("1");
+
+
+
 
 const showLoading = () => {
     cardContainer.innerHTML = `<span class="loading loading-dots loading-xl"></span>`;
