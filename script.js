@@ -98,11 +98,13 @@ const showDetailsModal = (plant) => {
   treeDetailModal.showModal();
 
   modalContainer.innerHTML = `
+  <div >
     <h1 class="text-center font-bold text-lg">${plant.name}</h1>
-    <img src="${plant.image}" alt="It's a plant image" class="rounded-xl w-[300px] h-[300px]  mx-auto my-2"/>
+    <img src="${plant.image}" alt="It's a plant image" class="rounded-xl w-[100px] h-[300px] lg:w-[100px] lg:h-[300px]  mx-auto my-2"/>
     <p class=" text-sm text-center py-5">${plant.description}</p>
     <p class="font-semibold text-center">Category: ${plant.category}</p>
     <p class="font-semibold text-center">Price: ৳${plant.price}</p>
+    </div>
   `;
    
 };

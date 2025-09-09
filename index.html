@@ -231,7 +231,12 @@
           <div class="flex flex-col justify-center items-center gap-5 py-10 px-10 w-11/12">
             <textarea class="border-none bg-white rounded-lg w-11/12  py-auto" name="name" id="" placeholder="Your Name"></textarea>
             <textarea class="border-none bg-white rounded-lg w-11/12" name="email" id="" placeholder="Your Email Address"></textarea>
-            <select class="border-none bg-white rounded-lg w-11/12" name="treeNo" id="">Number of Trees</select>
+            <select class="border-none bg-white rounded-lg w-11/12 h-12" name="treeNo" id="">
+              <option value="" disabled selected>Number of Trees</option>
+              <option value="1">1 Tree - 5$</option>
+              <option value="2">2 Trees - 10$</option>
+              <option value="3">3 Trees - 15$</option>
+            </select>
             <button class="bg-[#facc15] rounded-full px-5 py-3 text-[#15803d] text-xs hover:bg-[#d9b111] w-11/12">Donate now</button>
           </div>
           
